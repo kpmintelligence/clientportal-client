@@ -22,7 +22,7 @@ from botocore.exceptions import ClientError
 
 VERSION_LABEL = strftime("%Y%m%d%H%M%S")
 BUCKET_KEY = os.getenv('APPLICATION_NAME') + '/' + VERSION_LABEL + \
-    '-bitbucket_builds.zip'
+    '-client-bitbucket_builds.zip'
 
 def upload_to_s3(artifact):
     """
@@ -75,8 +75,8 @@ def deploy_new_revision():
         )
     except ClientError as err:
         print("Failed to deploy application revision.\n" + str(err))
-        return False     
-           
+        return False
+
     """
     Wait for deployment to complete
     """
@@ -96,7 +96,7 @@ def deploy_new_revision():
                 continue
         except ClientError as err:
             print("Failed to deploy application revision.\n" + str(err))
-            return False      
+            return False
     return True
 
 def main():
