@@ -4,5 +4,6 @@ ADD . /opt/app
 RUN apk update
 RUN apk add git make gcc g++ python
 RUN npm install
-EXPOSE 3000 3001
-CMD ["npm","run","serve"]
+RUN npm run build
+EXPOSE 3000
+CMD ["npm","run","start"]
