@@ -2,5 +2,5 @@
 
 set -e
 
-cd /var/app/todo/client
-docker run --rm --name client -p 3000:3000 client_image
+cd /var/app/todo/docker
+docker start docker_workspace_1

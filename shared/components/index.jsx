@@ -8,7 +8,7 @@ export default class MainView extends React.Component {
   render() {
     return (
       <div id="main-view">
-        <h1>Todos</h1>
+        <h1>Tuduuz</h1>
 
         <hr />
 

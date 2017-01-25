@@ -2,5 +2,5 @@
 
 set -e
 
-cd /var/app/todo/client
-docker stop client
+cd /var/app/todo/docker
+docker stop docker_workspace_1

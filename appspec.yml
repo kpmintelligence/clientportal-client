@@ -6,11 +6,11 @@ files:
 hooks:
   AfterInstall:
     - location: scripts/install_dependencies
-      timeout: 600
+      timeout: 900
       runas: ec2-user
-  ApplicationStart:
+  BeforeInstall:
     - location: scripts/start_server
-      timeout: 300
+      timeout: 600
       runas: ec2-user
   ApplicationStop:
     - location: scripts/stop_server

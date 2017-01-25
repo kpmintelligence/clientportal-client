@@ -2,5 +2,4 @@
 
 set -e
 
-cd /var/app/todo/client
-docker build -t client_image .
+docker exec -t -d docker_workspace_1 bash -c "cd /var/www/client && npm install && npm run build && npm start"
